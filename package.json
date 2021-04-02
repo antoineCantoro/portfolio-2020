@@ -1,0 +1,25 @@
+{
+  "name": "portfolio_2020",
+  "version": "1.0.0",
+  "description": "Antoine Cantoro, French UI & Web Designer",
+  "author": "",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "gsap": "^3.3.3",
+    "imagesloaded": "^4.1.4",
+    "locomotive-scroll": "^3.5.4",
+    "lottie-web": "^5.6.10",
+    "nuxt": "^2.0.0",
+    "vue-smooth-scrollbar": "^0.1.2"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2"
+  }
+}

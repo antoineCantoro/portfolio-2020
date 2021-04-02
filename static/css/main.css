@@ -1,0 +1,20 @@
+::selection {
+  color: #fff;
+  background: #4267F5;}
+
+body {
+  background: #111;
+  font-size: 16px;
+  font-family: 'Manrope', sans-serif;
+  color: #fff;}
+
+h1 {
+  font-weight: 600;
+  font-family: 'Gilroy', sans-serif;}
+
+
+@media (min-width: 1200px) { 
+  .col_lg {
+    width: 1200px;
+    margin: 0 auto;}
+}
