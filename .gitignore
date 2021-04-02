@@ -94,5 +94,6 @@ sw.*
 .editorconfig
 
 
-# Editor Config
+# Lourd
 /assets/fonts
+/static/video
