@@ -2,7 +2,6 @@ import lottie from "lottie-web";
 import gsap from "gsap";
 
 window.onNuxtReady(() => {
-    //console.log('site ready')
 
     function reveal() {
         var tl = gsap.timeline();
@@ -23,6 +22,6 @@ window.onNuxtReady(() => {
     }
     
     //devMode
-    //gsap.set('.loader', {height: 0})
-    reveal()
+    gsap.set('.loader', {height: 0})
+    //reveal()
 })

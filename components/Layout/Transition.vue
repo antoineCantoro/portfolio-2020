@@ -1,14 +1,6 @@
 <template>
-    <div class="transition_section">
-
-    </div>
+    <div class="transition_section"></div>
 </template>
-
-
-<script>
-
-</script>
-
 <style>
     .transition_section {
         width: 100%;

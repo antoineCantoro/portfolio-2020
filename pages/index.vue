@@ -8,7 +8,7 @@
             <div class="scroll_down">Scroll down</div>
           </div>
           <div class="paragraph_wrapper">
-            <p>Tout commence en 2011, lorsque que j'ai créé mon premier site web "pour le fun", je n'avais aucune idée que j'en ferai finalement mon métier !</p>
+            <p ref="test">Tout commence en 2011, lorsque que j'ai créé mon premier site web "pour le fun", je n'avais aucune idée que j'en ferai finalement mon métier !</p>
             <p>Désormais diplômé d'un mastère en marketing digital, je travaille depuis plus de <span class="highlights">2 ans en tant que UI &amp; Web Designer</span> et je suis à la recherche d'une nouvelle aventure professionnelle. Je souhaite mettre en œuvre mes compétences et mon savoir faire au cœur d'un nouveau projet et d'une nouvelle équipe, et pourquoi pas <span class="highlights">la vôtre ?</span></p>
             <p>Durant mon temps libre, je m'intéresse à tout ce qui touche à l'<span class="highlights">expérience utilisateur</span> et la psychologie qui découle des sciences cognitives afin d'appliquer ces concepts dans mes projets et proposer des expériences <span class="highlights">répondant aux besoins des utilisateurs</span>.</p>
             <p>À côté de ça, je m'intéresse aux dernières <span class="highlights">technologies</span>, à la <span class="highlights">photographie</span>, au <span class="highlights">cinéma</span> et aussi au <span class="highlights">sport</span>.</p>
@@ -24,6 +24,8 @@
         IMG SECTIOB
         </section>
     -->
+
+    <ProfilePicture/>
 
     <SkillsContainer />
 
@@ -53,6 +55,11 @@ import Quote from '~/components/about/Quote.vue'
 import SkillsContainer from '~/components/Skills/SkillsContainer.vue'
 import ExpContainer from '~/components/Experience/ExpContainer.vue'
 
+import ProfilePicture from '~/components/Home/ProfilePicture.vue'
+
+
+import { gsap } from 'gsap'
+
 export default {
   head () {
     return {
@@ -60,21 +67,29 @@ export default {
     }
   },
   components: {
-    SkillsContainer, Quote, ExpContainer, Circles
+    SkillsContainer, Quote, ExpContainer, Circles, ProfilePicture
   },
   methods: {
+    paragraphAppear: function(){
+      
+      let test = this.$refs.test
+      console.log('ready', test)
 
+      gsap.from(test, {y:10, duration:1})
+    }
   },
   mounted() {
+    this.paragraphAppear();
   },
   transition: {
     mode: "out-in",
     css: false,
     enter(el,done) {
-        this.enteringPage(done)
+        this.enteringPage(done);
+        
     },
     leave(el,done) {
-        this.leavingPage(done)
+        this.leavingPage(done);
     }
   }
 }

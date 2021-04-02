@@ -20,6 +20,7 @@ export default {
     data() {
         return {
             experiences: [
+                {jobName: 'Front-End Developer', companyName: 'BigBump Agency', years: '2021'},
                 {jobName: 'UI Designer', companyName: 'BVA', years: '2018 - 2019'},
                 {jobName: 'Web Designer', companyName: 'Ace GBS', years: '2017 - 2018'},
                 {jobName: 'Web Designer', companyName: 'Static Swim', years: '2016'},
@@ -40,6 +41,8 @@ export default {
     .ExperienceTitle {
         padding-bottom: 1em;}
 }
+
+
 
 @media (min-width: 768px) { 
     .ExperienceContainer {
