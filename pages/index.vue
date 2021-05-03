@@ -43,7 +43,7 @@
               <a href="https://www.instagram.com/antoine.cantoro_ui/" target="_blank"><img src="~/static/svg/instagram.svg" class="icon_social soc_instagram"></a>
               <a href="https://www.linkedin.com/in/antoine-cantoro-95443ab0/" target="_blank"><img src="~/static/svg/linkedin.svg" class="icon_social soc_linkedin"></a>
             </div>
-            <img src="~/static/svg/antoinecantorologo.svg" class="contact_logo">
+            <img src="~/static/svg/antoinecantorologo.svg" class="contact_logo" loading="lazy">
         </div>
     </section>
   </div>

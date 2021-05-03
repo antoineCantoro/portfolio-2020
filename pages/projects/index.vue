@@ -6,17 +6,17 @@
     </div>
 
     <nuxt-link to="/projects/aceGbs" class="ProjectList_Item">
-      <div class="imgsection project_ace"><img src="~/static/svg/acegbs_logo.svg"/></div>
+      <div class="imgsection project_ace"><img src="~/static/svg/acegbs_logo.svg" loading="lazy" alt="Ace Gbs white logo for project"/></div>
       <span class="ProjectList_ItemTitle">Ace Global Services</span>
     </nuxt-link>
 
     <nuxt-link to="/projects/staticSwim" class="ProjectList_Item">
-      <div class="imgsection project_staticswim"><img src="~/static/svg/staticswim_logo.svg"/></div>
+      <div class="imgsection project_staticswim"><img src="~/static/svg/staticswim_logo.svg" loading="lazy" alt="Static Swim white logo for project"/></div>
       <span class="ProjectList_ItemTitle">Static Swim</span>
     </nuxt-link>
 
     <nuxt-link to="/projects/nuitDigitale" class="ProjectList_Item">
-      <div class="imgsection project_nuitdigitale"><img src="~/static/svg/nuitdigitale_logo.svg"/></div>
+      <div class="imgsection project_nuitdigitale"><img src="~/static/svg/nuitdigitale_logo.svg" loading="lazy"  alt="La Nuit Digitale white logo for project"/></div>
       <span class="ProjectList_ItemTitle">La Nuit Digitale</span>
     </nuxt-link>
      

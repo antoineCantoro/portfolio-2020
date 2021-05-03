@@ -2,7 +2,7 @@
 <section class="photo_container">
     <div class="photo_wrapper">
         <div class="photo_overlay"></div>
-        <img src="~/static/img/staticswim/visu1.jpg" class="photo_item">
+        <img src="~/static/img/staticswim/visu1.jpg" class="photo_item" loading="lazy">
     </div>
 </section>
 </template>

@@ -2,7 +2,7 @@
     <div class="ProjectImg_Container">
         <div class="ProjectImg_Wrapper">
             <div class="ProjectImg_Overay"></div>
-            <img :src="imgSrc" :class="[imgClass]" class="ProjectImg_Img">
+            <img :src="imgSrc" :class="[imgClass]" class="ProjectImg_Img" loading="lazy" alt="">
         </div>
         
     </div>

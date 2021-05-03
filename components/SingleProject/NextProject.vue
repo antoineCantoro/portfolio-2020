@@ -36,7 +36,8 @@ export default {
         padding-bottom: 0.4em;}
 
     .NextProject_Button {
-        font-size: 0.8em;}
+        font-size: 0.8em;
+        opacity: 0.6;}
 }
 
 @media (min-width: 768px) { 

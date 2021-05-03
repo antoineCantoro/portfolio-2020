@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <p><img src="~/static/svg/antoinecantorologo.svg" class="footer_logo"> • 2020 © Tous droits réservés <span class="legalnotice">/ mentions légales</span></p>
+        <p><img src="~/static/svg/antoinecantorologo.svg" class="footer_logo" loading="lazy"> • 2020 © Tous droits réservés <span class="legalnotice">/ mentions légales</span></p>
         
         <div class="container_legalnotice" v-if="enableLegalNotice">
             <div class="closeLegalNotice_button" @click="enableLegalNotice = false">Fermer</div>

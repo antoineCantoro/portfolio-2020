@@ -1,58 +1,58 @@
 <template>  
     <section class="QuoteContainer col_lg">
-       <q class="QuoteItem">{{quote}}</q>
+       <p class="QuoteItem" ref="quote">"{{quote}}"</p>
     </section>
 </template>
 
 <script>
-import gsap from "gsap";
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/dist/ScrollTrigger"
+import {SplitText} from "gsap/dist/SplitText"
+gsap.registerPlugin(SplitText,ScrollTrigger);
 
 export default {
     methods: {
         displayQuote: function(){
-            let self = this
-            gsap.to(self.$el, {y: 0, opacity: 1, duration: 1, ease: "power4.out"});
-        },
-    },
-    props: 
-        ['quote']
-    ,
-    mounted() {
-        let ratio = 0.6
-        let options = {
-            root: null,
-            rootMargin: '0px',
-            threshold: ratio
-        }
-        let self = this
-
-        const callback = function (entries, observer) {
-            entries.forEach(entry => {
-                if (entry.intersectionRatio > ratio) {
-                    self.displayQuote()
-                    observer.unobserve(self.$el)
+            
+            let splitQuoteChild = new SplitText(this.$refs.quote, {type: "lines"});
+            new SplitText(this.$refs.quote, {type: "lines", linesClass: "QuoteItem__parent"});
+            
+            gsap.from(
+                splitQuoteChild.lines,
+                {yPercent: 100, duration: 1, ease: "power4.out", stagger:0.1,
+                    scrollTrigger: {
+                        trigger: this.$refs.quote,
+                        start: "top center",
+                    },
                 }
-            });
-        }
+            ) 
+        },
         
-        var observer = new IntersectionObserver(callback, options);
-        observer.observe(this.$el)
+    },
+    props: ['quote'],
+    mounted() {
+        this.displayQuote()
+    },
+    beforeDestroy() {
+        console.log('reset ?')
     }
 }
 </script>
 
 <style lang="scss">
+.QuoteItem__parent {
+    overflow: hidden;
+}
 .QuoteContainer {
     padding: 0 30px;
     margin: 5em 0px;
-    opacity: 0;
-    transform: translateY(100px);
 
     .QuoteItem {
         font-family: 'Manrope', sans-serif;
         font-size: 2em;
         line-height: 1.5;
         font-weight: 300;
+        overflow: hidden;
     }
 }
 

@@ -1,7 +1,7 @@
 <template>
   <section id="menu_container">
       <nuxt-link to="/">
-        <img src="~/static/svg/antoinecantorologo.svg" class="menu_logo">
+        <img src="~/static/svg/antoinecantorologo.svg" class="menu_logo" loading="lazy">
       </nuxt-link>
       <div class="menu_links">
         <nuxt-link to="/">Home</nuxt-link>

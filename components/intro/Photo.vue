@@ -2,7 +2,7 @@
 <section class="photo_container">
     <div class="photo_wrapper">
         <div class="photo_overlay"></div>
-        <img :src="photoUrl" :alt="photoAlt" class="photo_item">
+        <img :src="photoUrl" :alt="photoAlt" class="photo_item" loading="lazy">
     </div>
 </section>
 </template>

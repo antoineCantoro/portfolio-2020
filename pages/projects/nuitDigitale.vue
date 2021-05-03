@@ -30,14 +30,7 @@
         </div>
     </section>
 
-    <!--
-    <section class="project_cover_container">
-        <img src="~/static/img/nuitdigitale/visu1.jpg">
-    </section>
-    -->
-
     <FirstImage :photoUrl="mainImg" />
-
 
     <section class="paragraph_container col_lg first_paragraph_container">
         <p>Pendant deux mois, j’ai eu la chance de travailler dans l’association La Mêlée pour la préparation de l’édition 2015 de la Mêlée Numérique, notamment sur la partie graphisme, afin d’apporter mes connaissances et mon savoir faire pour la réalisation de divers supports pour cet événement.</p>
@@ -78,7 +71,10 @@ import BlockQuote from '~/components/SingleProject/BlockQuote.vue'
 import ProjectPhoto from '~/components/intro/ProjectPhoto.vue'
 import NextProject from '~/components/SingleProject/NextProject.vue'
 
+import transition from '~/mixins/transition.js';
+
 export default {
+  mixins: [transition],
   head () {
     return {
       title: 'La Nuit Digitale • Antoine Cantoro',
@@ -87,26 +83,14 @@ export default {
   data() {
         return {
             quote: "Une soirée dynamique et connectée qui doit promouvoir et mettre en avant les possibilités artistiques du digital.",
-            
             nextProjectName: "Ace Global Service",
             nextProjectLink: "/projects/aceGbs",
-
             mainImg: "/img/nuitdigitale/visu1.jpg",
         }
     },
   components: {
     FirstImage, BlockQuote, ProjectPhoto, NextProject
   },
-  transition: {
-    mode: "out-in",
-    css: false,
-    enter(el,done) {
-        this.enteringPage(done)
-    },
-    leave(el,done) {
-        this.leavingPage(done)
-    }
-  }
 }
 </script>
 

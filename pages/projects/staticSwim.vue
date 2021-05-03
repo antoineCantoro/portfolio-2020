@@ -31,12 +31,6 @@
         </div>
     </section>
 
-    <!--
-    <section class="project_cover_container">
-        <img src="~/static/img/staticswim/visu1.jpg">
-    </section>
-    -->
-
     <FirstImage :photoUrl="mainImg" />
 
     <section class="paragraph_container col_lg first_paragraph_container">
@@ -45,12 +39,6 @@
     </section>
 
     <BlockQuote :quote="quote" />
-
-    <!--
-    <section class="q_container col_lg">
-       <q>Proposer une expérience digitale égale à la qualité du produit.</q>
-    </section>
-    -->
 
     <section class="paragraph_container col_lg second_paragraph_container">
         <p>La mission de refonte complète a duré 5 mois, durant lesquels nous avons eu la possibilité de concevoir une nouvelle interface et de l’améliorer en réalisant plusieurs itérations selon les retours et remarques collectés.</p>
@@ -62,12 +50,11 @@
             v-for="img in images"
             :key="img.imgUrl"
             :class="img.style"
-
             :imgSrc="img.imgUrl"
         />
     </section>
 
-    <NextProject  :nextProjectLink="nextProjectLink" :nextProjectName="nextProjectName"/>
+    <NextProject :nextProjectLink="nextProjectLink" :nextProjectName="nextProjectName"/>
 
   </div>
 </template>
@@ -79,7 +66,10 @@ import ProjectPhoto from '~/components/intro/ProjectPhoto.vue'
 import ProjectImages from '~/components/SingleProject/ProjectImages.vue'
 import NextProject from '~/components/SingleProject/NextProject.vue'
 
+import transition from '~/mixins/transition.js';
+
 export default {
+  mixins: [transition],
   head () {
     return {
       title: 'Static Swim • Antoine Cantoro',
@@ -106,22 +96,11 @@ export default {
   components: {
     FirstImage, BlockQuote, ProjectPhoto, ProjectImages, NextProject
   },
-  transition: {
-    mode: "out-in",
-    css: false,
-    enter(el,done) {
-        this.enteringPage(done)
-    },
-    leave(el,done) {
-        this.leavingPage(done)
-    }
-  }
 }
 </script>
 
 <style lang="scss" scoped>
 .project_header {
-
     h1 {
         margin: 1em 0;
         padding: 0 30px;}
@@ -331,84 +310,6 @@ p {
 .img_mozaic {
     margin: 30px 0;
 }
-
-
-
-
-/*
-.next_project_container {
-    margin: 5em 0;
-    padding: 0 30px;
-}
-.next_project_container a {
-    text-decoration: none;
-    color: #fff;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.next_project_title {
-    font-family: 'Gilroy', sans-serif;
-    font-size: 2em;
-    font-weight: 600;
-    padding-bottom: 0.4em;
-}
-.next_project_button {
-    font-size: 0.8em;
-}
-@media (min-width: 768px) { 
-    .next_project_container {
-        margin: 7em 0;
-    }
-    .next_project_title {
-        font-size: 3em;
-    }
-    .next_project_button {
-        font-size: 1em;
-    }
-}
-@media (min-width: 1200px) {
-    .next_project_container {
-        margin: 15em 0;
-    }
-    .next_project_title {
-        font-size: 5em;
-    }
-}
-
-
-
-.img_mozaic_container img {
-    width: 100%
-}
-
-
-
-@media (min-width: 1200px) {
-    .img_mozaic_container img {
-        margin-top: 105px;
-        margin-bottom: 105px;
-    }
-     .img_mozaic_container .img1 {
-        width: 58.333%;
-        margin-left: 8.333%;
-    }
-    .img_mozaic_container .img2 {
-        width: 41.666%;
-        margin-left: 50%;
-    }
-    .img_mozaic_container .img3 {
-        width: 66.666%;
-         margin-left: 16.666%;
-    }
-    .img_mozaic_container .img4 {
-        width: 100%;
-    }
-}
-
-*/
 
 
 </style>
