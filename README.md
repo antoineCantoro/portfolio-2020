@@ -19,7 +19,7 @@ $ npm run start
 $ npm run generate
 ```
 
-## Not included dependecies
+## Not included dependencies
 Gilroy Fonts files are not provided, to purchase font family, visit https://www.myfonts.com/fonts/radomir-tinkov/gilroy/
 Gsap Premium Plugins are not provided, to purchase them, visit https://greensock.com/club/
 
