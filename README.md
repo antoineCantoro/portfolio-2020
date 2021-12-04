@@ -1,4 +1,4 @@
-# portfolio_2020
+# Portfolio 2020
 
 > Here is my 2020's Portfolio, based on Nuxt.js framework.
 
